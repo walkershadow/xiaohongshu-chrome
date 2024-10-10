@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Xiaohongshu Search and Comment Retriever",
+  "version": "1.0",
+  "description": "Search Xiaohongshu and retrieve comments from search results",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.xiaohongshu.com/*"],
+      "js": ["src/content-script.js"]
+    }
+  ]
+}
